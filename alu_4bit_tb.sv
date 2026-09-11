@@ -132,6 +132,10 @@ module alu_4bit_tb;
             $display("STATUS      : SOME TESTS FAILED");
 
         $display("========================================");
+        // SystemVerilog Assertions
+
+assert (ZERO == (RESULT == 4'b0000))
+    else $error("ZERO flag assertion failed!");
 
         $finish;
 
